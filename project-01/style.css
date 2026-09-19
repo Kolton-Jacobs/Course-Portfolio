@@ -138,3 +138,11 @@ nav a:hover {
 .project-card a:hover {
     color: var(--primary-color);
 }
+
+#about {
+    padding: 60px 8%;
+}
+
+#contact {
+    padding: 50px 8%;
+}
