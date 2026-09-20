@@ -147,15 +147,36 @@ code {
   margin-top: 80px;
 }
 
-.nav-custom {}
+.nav-custom {
+  margin-top: 20px;
+}
 
-.nav-custom ul {}
+.nav-custom ul {
+  display: flex;
+  justify-content: center;   
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
 
-.nav-custom li {}
+.nav-custom li {
+  display: inline-block;
+}
 
-.nav-custom a {}
+.nav-custom a {
+  display: block;
+  padding: 10px 20px;
+  background-color: #0066CC;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
 
-.nav-custom a:hover {}
+.nav-custom a:hover {
+  background-color: #003366;
+  transform: translateY(-3px);
+}
 
 @media (width >=480px) {}
 
