@@ -177,12 +177,13 @@ nav a:hover {
     color: var(--primary-color);
 }
 
-.about-card {
+.education,
+.navy-career {
     display: flex;
     align-items: stretch;
 
     min-height: 250px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 
     background-color: var(--light-color);
 
@@ -192,22 +193,36 @@ nav a:hover {
     overflow: hidden;
 }
 
-.about-card-text {
+.education-text,
+.navy-career-text {
     flex: 1;
-    padding: 30px;
 
+    padding: 30px;
+    
     position: relative;
     z-index: 2;
 }
 
-.about-card-text h2 {
+.education-text h2,
+.navy-career-text h2 {
     margin-top: 0;
+
     color: var(--primary-color);
 }
 
-.about-card img {
+.education-image,
+.navy-career-image {
     width: 40%;
+}
+
+.education-image img,
+.navy-career-image img {
+    width: 100%;
+    height: 100%;
+
     object-fit: cover;
+
+    display: block;
 
     -webkit-mask-image: linear-gradient(
         to right,
@@ -330,6 +345,79 @@ footer p {
     margin: 0;
 }
 
+@m/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 15px;
+        gap: 10px;
+    }
+
+    main {
+        width: 92%;
+        padding: 25px 0;
+    }
+
+    .hero,
+    .page-intro {
+        padding: 40px 10px;
+    }
+
+    .hero h2,
+    .page-intro h2 {
+        font-size: 2.2rem;
+    }
+
+    .skill-container,
+    .project-container {
+        flex-direction: column;
+    }
+
+    .skill-card,
+    .project-card {
+        width: 100%;
+    }
+
+    /* About page cards */
+
+    .education,
+    .navy-career {
+        flex-direction: column;
+    }
+
+    .education-image,
+    .navy-career-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .education-image img,
+    .navy-career-image img {
+        -webkit-mask-image: linear-gradient(
+            to bottom,
+            transparent,
+            black 40%
+        );
+
+        mask-image: linear-gradient(
+            to bottom,
+            transparent,
+            black 40%
+        );
+    }
+
+}
 @media (max-width: 768px) {
 
     header {
@@ -370,24 +458,30 @@ footer p {
     .project-card {
         width: 100%;
     }
-    .about-card {
-    flex-direction: column;
-}
 
-    .about-card img {
-    width: 100%;
-    height: 200px;
+    .education,
+    .navy-career {
+        flex-direction: column;
+    }
 
-    -webkit-mask-image: linear-gradient(
-        to bottom,
-        transparent,
-        black 40%
-    );
+    .education-image,
+    .navy-career-image {
+        width: 100%;
+        height: 200px;
+    }
 
-    mask-image: linear-gradient(
-        to bottom,
-        transparent,
-        black 40%
-    );
-}
+    .education-image img,
+    .navy-career-image img {
+        -webkit-mask-image: linear-gradient(
+            to bottom,
+            transparent,
+            black 40%
+        );
+
+        mask-image: linear-gradient(
+            to bottom,
+            transparent,
+            black 40%
+        );
+    }
 }
